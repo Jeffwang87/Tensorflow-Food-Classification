@@ -13,7 +13,7 @@ import os
 from random import shuffle
 import matplotlib.pyplot as plt
 
-# set you own directory
+#set you own directory
 DIR = "./images"
 
 #def your own image label depending on your data
