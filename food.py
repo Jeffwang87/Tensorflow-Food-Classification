@@ -1,3 +1,9 @@
+"""
+Food Images Classification
+authors: Jianxin Wang
+
+"""
+
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import datasets, layers, models
@@ -7,9 +13,10 @@ import os
 from random import shuffle
 import matplotlib.pyplot as plt
 
+# set you own directory
 DIR = "./images"
 
-
+#def your own image label depending on your data
 def label_img(name):
     word_label = name.split('/')[0]
     if word_label == 'bibimbap':
@@ -21,7 +28,7 @@ def label_img(name):
 
 def load_training_data():
     train_data = []
-    file = open("./meta/train.txt", "r")
+    file = open("set your directory", "r")
     for img in file.readlines():
         label =label_img(img)
         path = os.path.join(DIR, img[:-1]) + ".jpg"
@@ -36,7 +43,7 @@ def load_training_data():
 
 def load_test_data():
     test_data = []
-    file = open("./meta/test.txt", "r")
+    file = open("set your directory", "r")
     for img in file.readlines():
         label =label_img(img)
         path = os.path.join(DIR, img[:-1]) + ".jpg"
